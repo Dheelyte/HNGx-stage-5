@@ -1,0 +1,13 @@
+.idea/
+env/
+new_env/
+__pycache__/
+*.pyc
+db.sqlite3
+migrations/
+*.vtt
+*.srt
+*.mp4
+*.mkv
+*.m4v
+*.wav

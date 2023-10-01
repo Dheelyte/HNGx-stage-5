@@ -1,8 +1,9 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework import serializers
 from .models import Video
 
 
-class VideoSerializer(ModelSerializer):
+class VideoSerializer(serializers.ModelSerializer):
+    transcription = serializers.URLField(read_only=True)
     class Meta:
         model = Video
-        fields = '__all__'
+        fields = ('id', 'video', 'transcription')
