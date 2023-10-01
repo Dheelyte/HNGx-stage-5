@@ -9,6 +9,7 @@ decorator==4.4.2
 Django==4.2.5
 djangorestframework==3.14.0
 drf-yasg==1.21.7
+gunicorn==21.2.0
 h11==0.14.0
 httpcore==0.18.0
 httpx==0.25.0
