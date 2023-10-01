@@ -12,9 +12,10 @@ def transcribe(video_name):
 
     name = time.time()
 
-    aai.settings.api_key = "0c371e21a64a4fc5972bf00771f9af86"
+    aai.settings.api_key = os.environ.get('ASSEMBLY_AI_KEY')
 
-    #video_path = f"test2.mp4"
+    #try:
+
     audio_path = os.path.join('media', 'audio', f"{name}.wav")
     video_path = os.path.join('media', 'videos', video_name)
 
@@ -35,6 +36,13 @@ def transcribe(video_name):
         f.write(subtitles_output)
     
     subtitle_url = f"/media/transcriptions/{name}.vtt"
+
+    try:
+        os.remove(audio_path)
+    except:
+        pass
+    # except:
+    #     return Response({"error": "An error occurred while transcribing vid   eo"})
     return subtitle_url
 
 

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-a#w=shzrfj&#%rhvnz7kq(9dk05@-8nj$v*d8d+azwqet(0^-)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'video-transcribe-ai.onrender.com']
 
 
 # Application definition
